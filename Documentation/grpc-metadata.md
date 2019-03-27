@@ -64,17 +64,6 @@ md := metadata.Pairs(
 )
 ```
 
-## Retrieving metadata from context
-
-Metadata can be retrieved from context using `FromIncomingContext`:
-
-```go
-func (s *server) SomeRPC(ctx context.Context, in *pb.SomeRequest) (*pb.SomeResponse, err) {
-    md, ok := metadata.FromIncomingContext(ctx)
-    // do something with metadata
-}
-```
-
 ## Sending and receiving metadata - client side
 
 Client side metadata sending and receiving examples are available [here](../examples/features/metadata/client/main.go).
